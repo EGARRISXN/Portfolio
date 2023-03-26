@@ -1,49 +1,66 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
 }
 
-body {
-    background-color: #f7f8f5;
+.wrapper>*{
+    padding: 10px;
+    margin: 10px;
+    flex: 1 100%;
+    border-radius: 10px;
 }
 
-
-header {
-    padding: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: grey;
+.header {
+    background: aqua;
+    height: 120px;
 }
 
-header h1 {
-    display: inline-block;
-    background-color: aqua;
-    color: grey;
+.footer {
+    background: yellowgreen;
+    height: 80px;
+}
+
+.main {
+    text-align: left;
+    background: red;
+    height: 300px;
     font-size: 24px;
 }
 
-header nav {
-    padding-top: 15px;
-    margin-right: 20px;
-    float: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
-    font-size: 20px;
-
+.aside1 {
+    background: aqua;
 }
 
-header nav ul {
-    list-style-type: none;
+.aside2 {
+    background: peru;
 }
 
-header nav ul li {
-    display: inline-block;
-    margin-left: 25px;
+@media all and (min-width:880px){
+    .main{
+        flex: 3;
+    }
+
+    .aside1{
+        order: 1;
+    }
+
+    .aside2{
+        order: 2;
+    }
+
+    .main{
+        order: 2;
+    }
+
+    .footer{
+        order: 4;
+    }
 }
 
-.hero {
-    height: 100px;
-    margin-bottom: 25px;
-    background-image: url("../images/02-hero-bg.jpg");
-    background-size: cover;
-    background-position: center;
+@media all and (min-width: 600px){
+    .aside {
+        flex: 1;
+    }
+
 }
