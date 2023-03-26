@@ -1,66 +1,220 @@
-.wrapper {
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  :root {
+    --primary: rgba(68, 88, 119, 1);
+    --secondary: rgba(146, 204, 206, 1);
+    --tertiary: rgba(49, 52, 61, 1);
+    --dark: rgba(28, 29, 33, 1);
+    --light: rgba(238, 238, 247, 1);
+  }
+  
+  .webpage-title {
+    padding: 10px 10px 0px 75px;
+    background-color: var(--secondary);
+    color: var(--tertiary);
+    font-size: 3rem;
+  }
+  
+  /*! LINK ANIMATION - DON'T DELETE BELOW THIS LINE */
+  .nav-li {
     display: flex;
-    flex-flow: row wrap;
-    text-align: center;
-}
-
-.wrapper>*{
+  }
+  
+  li[data-nav-link] {
     padding: 10px;
     margin: 10px;
-    flex: 1 100%;
-    border-radius: 10px;
-}
+  }
+  
+  a {
+    display: inline-block;
+    font-size: 1.3rem;
+    /* relative so that the pseudo element after is position relative
+       to this `a` element. */
+    position: relative;
+    padding: 5px;
+    border-bottom: 3px solid var(--secondary);
+    color: var(--secondary);
+    text-decoration: none;
+    color: var(--secondary);
+    z-index: 1;
+  }
+  
+  a::after {
+    /* this pseudo element will be place in an absolute position
+       within the `a` parent element */
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* `scaleY` will scale down the pseudo element to 0 so that
+        is not visible. */
+    transform: scaleY(0);
+    transform-origin: bottom center;
+    background: var(--secondary);
+    z-index: -1;
+    /* `transform` is the time it will take for the transition
+        to complete. */
+    transition: transform 0.8s;
+  }
+  
+  a:hover {
+    color: var(--dark);
+  }
+  
+  a:hover::after {
+    /* scales the pseudo element up 100% so that is visible */
+    transform: scaleY(1);
+  }
+  
+  /*! LINK ANIMATION - DON'T DELETE ABOVE THIS LINE */
+  
+  header {
+    display: flex;
+    background-color: var(--tertiary);
+    padding: 10px 250px 10px 0px;
+    justify-content: space-between;
+  }
+  
+  /* ! NAVIGATION LINKS ON HEADER */
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  ul {
+    text-align: right;
+    padding-right: 30px;
+    list-style-type: none;
+  }
+  
+  /* ! HERO BANNER */
+  .banner {
+    grid-area: banner;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 40px 260px 40px;
+    height: 200px;
+    background-image: url("../images/02-hero-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .cool-subtitle {
+    background-color: #afeeee;
+    color: #292b2c;
+    padding: 0px 10px 0 10px;
+    margin-right: 40px;
+  }
+  
+  body {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  
+  /*! :::::::::::::: ABOUT CONTAINER :::::::::::::: */
+  .about-container {
+    min-height: 1000px;
+    border: 5px dashed red;
+    padding: 20px 300px 20px 300px;
+  }
+  
+  .about-flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-around;
+    /* align-items: center; */
+    /* min-height: 50%; */
+    max-width: 1400px;
+    padding: 20px;
+    border: 3px dashed purple;
+  }
+  
+  aside {
+    /* flex: 1; */
+    min-width: 30%;
+    min-height: 200px;
+    border: 3px dotted green;
+    margin: 10px 0px 10px;
+  }
+  
+  section {
+    /* flex: 2; */
+    min-width: 68.5%;
+    min-height: 200px;
+    border: 3px dotted green;
+    margin: 10px 0px 10px;
+  }
+  
+  /*! ::::::::::::: IMAGES SECTION ::::::::::::: */
+  .img-border {
+    border: 5px solid var(--secondary);
+  }
+  
+  .img-label {
+    position: absolute;
+    top: 420px;
+    background-color: var(--secondary);
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: center;
+    z-index: 1;
+  }
+  
+  .img-1 {
+    position: relative;
+    /* min-width: 400px; */
+    height: 575px;
+    background-size: 1850px;
+    background-image: url("../images/02-portfolio-4.jpg");
+    margin-bottom: 20px;
+  }
 
-.header {
-    background: aqua;
-    height: 120px;
-}
-
-.footer {
-    background: yellowgreen;
-    height: 80px;
-}
-
-.main {
-    text-align: left;
-    background: red;
-    height: 300px;
-    font-size: 24px;
-}
-
-.aside1 {
-    background: aqua;
-}
-
-.aside2 {
-    background: peru;
-}
-
-@media all and (min-width:880px){
-    .main{
-        flex: 3;
-    }
-
-    .aside1{
-        order: 1;
-    }
-
-    .aside2{
-        order: 2;
-    }
-
-    .main{
-        order: 2;
-    }
-
-    .footer{
-        order: 4;
-    }
-}
-
-@media all and (min-width: 600px){
-    .aside {
-        flex: 1;
-    }
-
-}
+  .img-2 {
+    position: relative;
+    /* min-width: 400px; */
+    height: 575px;
+    background-size: 1850px;
+    background-image: url("../images/02-portfolio-1.jpg");
+    margin-bottom: 20px;
+  }
+  
+  .img-3 {
+    position: relative;
+    /* min-width: 400px; */
+    height: 575px;
+    background-size: 1850px;
+    background-image: url("../images/02-portfolio-2.jpg");
+    margin-bottom: 20px;
+  }
+  
+  .img-4 {
+    position: relative;
+    /* min-width: 400px; */
+    height: 575px;
+    background-size: 1850px;
+    background-image: url("../images/02-portfolio-3.jpg");
+    margin-bottom: 20px;
+  }
+  
+  .img-5 {
+    position: relative;
+    /* min-width: 400px; */
+    height: 575px;
+    background-size: 1850px;
+    background-image: url("../images/02-run-buddy.jpg");
+    margin-bottom: 20px;
+  }
+  
+  @media screen and (max-width: 993px) {
+  
+    /* RESPONSIVE MEDIA CSS GOES HERE */
+  
+  }
+  
