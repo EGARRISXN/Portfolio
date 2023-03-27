@@ -155,12 +155,6 @@
   
   
   /*! ::::::::::::: IMAGES SECTION ::::::::::::: */
-
-.img-2 .img-3 {
- Display:inline-block;
-  Width:50%;
-}
-
   .img-border {
     border: 5px solid var(--secondary);
   }
