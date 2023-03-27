@@ -19,17 +19,26 @@
     font-size: 3rem;
   }
   
+  .container {
+    display: flex;
+    flex-flow: row wrap;
+}
+  .container>*{
+    flex: 1 100%;
+}
+
+
   /*! LINK ANIMATION - DON'T DELETE BELOW THIS LINE */
   .nav-li {
     display: flex;
   }
   
-  li[data-nav-link] {
-    padding: 10px;
-    margin: 10px;
+  header li[data-nav-link] {
+    padding: 5px;
+    margin: 5px;
   }
   
-  a {
+  header a {
     display: inline-block;
     font-size: 1.3rem;
     /* relative so that the pseudo element after is position relative
@@ -43,7 +52,7 @@
     z-index: 1;
   }
   
-  a::after {
+  header a::after {
     /* this pseudo element will be place in an absolute position
        within the `a` parent element */
     position: absolute;
@@ -63,11 +72,11 @@
     transition: transform 0.8s;
   }
   
-  a:hover {
+  header a:hover {
     color: var(--dark);
   }
   
-  a:hover::after {
+  header a:hover::after {
     /* scales the pseudo element up 100% so that is visible */
     transform: scaleY(1);
   }
@@ -82,14 +91,14 @@
   }
   
   /* ! NAVIGATION LINKS ON HEADER */
-  nav {
+  header nav {
     display: flex;
     align-items: center;
   }
   
-  ul {
-    text-align: right;
-    padding-right: 30px;
+  header ul {
+    text-align: center;
+    padding-right: 0px;
     list-style-type: none;
   }
   
@@ -121,7 +130,7 @@
   .about-container {
     min-height: 1000px;
     border: 5px dashed red;
-    padding: 20px 300px 20px 300px;
+    padding: 20px 100px 20px 100px;
   }
   
   .about-flexbox {
@@ -144,15 +153,14 @@
     margin: 10px 0px 10px;
   }
   
-  section {
-    /* flex: 2; */
-    min-width: 68.5%;
-    min-height: 200px;
-    border: 3px dotted green;
-    margin: 10px 0px 10px;
-  }
   
   /*! ::::::::::::: IMAGES SECTION ::::::::::::: */
+
+.img-2 .img-3 {
+ Display:inline-block;
+  Width:50%;
+}
+
   .img-border {
     border: 5px solid var(--secondary);
   }
@@ -180,6 +188,7 @@
     position: relative;
     /* min-width: 400px; */
     height: 575px;
+    width: 50%;
     background-size: 1850px;
     background-image: url("../images/02-portfolio-1.jpg");
     margin-bottom: 20px;
@@ -189,6 +198,7 @@
     position: relative;
     /* min-width: 400px; */
     height: 575px;
+    width: 50%;
     background-size: 1850px;
     background-image: url("../images/02-portfolio-2.jpg");
     margin-bottom: 20px;
@@ -198,6 +208,7 @@
     position: relative;
     /* min-width: 400px; */
     height: 575px;
+    width: 50%;
     background-size: 1850px;
     background-image: url("../images/02-portfolio-3.jpg");
     margin-bottom: 20px;
@@ -207,14 +218,35 @@
     position: relative;
     /* min-width: 400px; */
     height: 575px;
+    width: 50%;
     background-size: 1850px;
     background-image: url("../images/02-run-buddy.jpg");
     margin-bottom: 20px;
   }
+
+  /*! ::::::::::::: SECTIONS ::::::::::::: */
   
-  @media screen and (max-width: 993px) {
-  
-    /* RESPONSIVE MEDIA CSS GOES HERE */
-  
+  section {
+    /* flex: 2; */
+    min-width: 68.5%;
+    min-height: 200px;
+    border: 3px dotted green;
+    margin: 10px 0px 10px;
+  }
+
+  .contact-me {
+    display: flex;
+    align-items: center;
+    font-size: 8px;
+    padding: 10% 0;
+  }
+
+  .contact-me li{
+    padding: 10% 0;
+    margin: 10px;
+    list-style-type: none;
   }
   
+@media screen and (min-width: 993px){
+      
+}
