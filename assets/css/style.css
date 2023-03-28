@@ -150,50 +150,88 @@
     flex-direction: row;
     width: 100%;
   }
-  
+
   .img-label {
     position: absolute;
-    top: 420px;
+    bottom: 30px;
     background-color: var(--secondary);
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 1rem;
-    text-align: center;
     z-index: 1;
   }
+  
+  .img-label2 {
+    position: absolute;
+    bottom: 30px;
+    background-color: var(--secondary);
+    font-size: 1.5rem;
+    padding: 1rem;
+    z-index: 1;
+  }
+
   .img-1 {
     position: relative;
-    height: 575px;
+    height: 460px;
     width: 100%;
     background-image: url("../images/02-portfolio-4.jpg");
-    margin-bottom: 20px;
+    margin: 15px;
+    opacity: .8;
+    transition: .5s ease;
   }
+  .img-1:hover {
+    opacity: 1;
+  }
+
   .img-2 {
     position: relative;
     background-image: url("../images/02-portfolio-1.jpg");
-    height: 575px;
+    height: 230px;
     width: 50%;
-    margin-bottom: 20px;
+    margin: 15px;
+    opacity: .8;
+    transition: .5s ease;
   }
+  .img-2:hover {
+    opacity: 1;
+  }
+
   .img-3 {
     position: relative;
     background-image: url("../images/02-portfolio-2.jpg");
-    height: 575px;
+    height: 230px;
     width: 50%;
-    margin-bottom: 20px;
+    margin: 15px;
+    opacity: .8;
+    transition: .5s ease;
   }
+  .img-3:hover {
+    opacity: 1;
+  }
+
   .img-4 {
     position: relative;
-    height: 575px;
+    height: 230px;
     width: 50%;
     background-image: url("../images/02-portfolio-3.jpg");
-    margin-bottom: 20px;
+    margin: 15px;
+    opacity: .8;
+    transition: .5s ease;
   }
+  .img-4:hover {
+    opacity: 1;
+  }
+
   .img-5 {
     position: relative;
-    height: 575px;
+    height: 230px;
     width: 50%;
     background-image: url("../images/02-run-buddy.jpg");
-    margin-bottom: 20px;
+    margin: 15px;
+    opacity: .8;
+    transition: .5s ease;
+  }
+  .img-5:hover {
+    opacity: 1;
   }
 
   .contact {
