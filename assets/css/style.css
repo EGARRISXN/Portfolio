@@ -176,7 +176,7 @@
     background-image: url("../images/02-portfolio-4.jpg");
     margin: 15px;
     opacity: .8;
-    transition: .5s ease;
+    transition: .5s;
   }
   .img-1:hover {
     opacity: 1;
@@ -189,7 +189,7 @@
     width: 50%;
     margin: 15px;
     opacity: .8;
-    transition: .5s ease;
+    transition: .5s;
   }
   .img-2:hover {
     opacity: 1;
@@ -202,7 +202,7 @@
     width: 50%;
     margin: 15px;
     opacity: .8;
-    transition: .5s ease;
+    transition: .5s;
   }
   .img-3:hover {
     opacity: 1;
@@ -215,7 +215,7 @@
     background-image: url("../images/02-portfolio-3.jpg");
     margin: 15px;
     opacity: .8;
-    transition: .5s ease;
+    transition: .5s;
   }
   .img-4:hover {
     opacity: 1;
@@ -228,7 +228,7 @@
     background-image: url("../images/02-run-buddy.jpg");
     margin: 15px;
     opacity: .8;
-    transition: .5s ease;
+    transition: .5s;
   }
   .img-5:hover {
     opacity: 1;
