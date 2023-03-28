@@ -36,7 +36,6 @@
     margin: 10px 10px 0 5px;
 
   }
-  
   header a {
     display: inline-block;
     font-size: 1.5rem;
@@ -48,7 +47,6 @@
     color: var(--secondary);
     z-index: 1;
   }
-  
   header a::after {
     position: absolute;
     content: "";
@@ -62,26 +60,21 @@
     z-index: -1;
     transition: transform 0.8s;
   }
-  
   header a:hover {
     color: var(--dark);
   }
-  
   header a:hover::after {
     transform: scaleY(1);
   }
-  
   header {
     display: flex;
     background-color: var(--tertiary);
     padding: 0 120px 15px 0;
     justify-content: space-between;
   }
-
   header nav {
     display: flex;
   }
-  
   header ul {
     text-align: center;
     color: var(--secondary);
@@ -99,7 +92,6 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-  
   .cool-subtitle {
     background-color: #afeeee;
     color: #292b2c;
@@ -134,7 +126,6 @@
     border-right: 5px solid var(--primary);
     padding-right: 15px ;
   }
-  
   h2 {
     font-size: 3.5rem;
     color: var(--primary);
@@ -151,7 +142,6 @@
     flex: 0 0 77%;
     flex-wrap: wrap;
   }
-
   .img-label {
     position: absolute;
     top: 420px;
@@ -161,36 +151,30 @@
     text-align: center;
     z-index: 1;
   }
-  
   .img-1 {
     position: relative;
     height: 575px;
     background-image: url("../images/02-portfolio-4.jpg");
     margin-bottom: 20px;
   }
-
-
   .img-2 {
     position: relative;
     background-image: url("../images/02-portfolio-1.jpg");
     height: 575px;
     margin-bottom: 20px;
   }
-  
   .img-3 {
     position: relative;
     background-image: url("../images/02-portfolio-2.jpg");
     height: 575px;
     margin-bottom: 20px;
   }
-  
   .img-4 {
     position: relative;
     height: 575px;
     background-image: url("../images/02-portfolio-3.jpg");
     margin-bottom: 20px;
   }
-  
   .img-5 {
     position: relative;
     height: 575px;
