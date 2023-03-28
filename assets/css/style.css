@@ -13,36 +13,33 @@
   }
   
   .webpage-title {
-    padding: 10px 10px 0px 75px;
+    padding: 10px 10px 0px 50px;
     background-color: var(--secondary);
     color: var(--tertiary);
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
   
   .container {
     display: flex;
     flex-flow: row wrap;
-}
+  }
   .container>*{
     flex: 1 100%;
-}
+  }
 
-
-  /*! LINK ANIMATION - DON'T DELETE BELOW THIS LINE */
   .nav-li {
     display: flex;
   }
   
   header li[data-nav-link] {
-    padding: 5px;
-    margin: 5px;
+    padding-top: 15px;
+    margin: 10px 10px 0 5px;
+
   }
   
   header a {
     display: inline-block;
-    font-size: 1.3rem;
-    /* relative so that the pseudo element after is position relative
-       to this `a` element. */
+    font-size: 1.5rem;
     position: relative;
     padding: 5px;
     border-bottom: 3px solid var(--secondary);
@@ -53,22 +50,16 @@
   }
   
   header a::after {
-    /* this pseudo element will be place in an absolute position
-       within the `a` parent element */
     position: absolute;
     content: "";
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /* `scaleY` will scale down the pseudo element to 0 so that
-        is not visible. */
     transform: scaleY(0);
     transform-origin: bottom center;
     background: var(--secondary);
     z-index: -1;
-    /* `transform` is the time it will take for the transition
-        to complete. */
     transition: transform 0.8s;
   }
   
@@ -77,38 +68,32 @@
   }
   
   header a:hover::after {
-    /* scales the pseudo element up 100% so that is visible */
     transform: scaleY(1);
   }
-  
-  /*! LINK ANIMATION - DON'T DELETE ABOVE THIS LINE */
   
   header {
     display: flex;
     background-color: var(--tertiary);
-    padding: 10px 250px 10px 0px;
+    padding: 0 120px 15px 0;
     justify-content: space-between;
   }
-  
-  /* ! NAVIGATION LINKS ON HEADER */
+
   header nav {
     display: flex;
-    align-items: center;
   }
   
   header ul {
     text-align: center;
-    padding-right: 0px;
+    color: var(--secondary);
     list-style-type: none;
   }
   
-  /* ! HERO BANNER */
   .banner {
     grid-area: banner;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    padding: 40px 260px 40px;
+    padding: 40px 120px 40px;
     height: 200px;
     background-image: url("../images/02-hero-bg.jpg");
     background-repeat: no-repeat;
@@ -118,47 +103,55 @@
   .cool-subtitle {
     background-color: #afeeee;
     color: #292b2c;
-    padding: 0px 10px 0 10px;
-    margin-right: 40px;
+    font-size: 2.7rem;
+    padding: 3px 15px 3px 15px;
+    margin-right: 0;
   }
   
   body {
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   }
-  
-  /*! :::::::::::::: ABOUT CONTAINER :::::::::::::: */
+
   .about-container {
-    min-height: 1000px;
-    border: 5px dashed red;
-    padding: 20px 100px 20px 100px;
+    padding: 0 100px 0;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-evenly;
   }
-  
-  .about-flexbox {
+
+  .section1, .section2, .section3 {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-content: space-around;
-    /* align-items: center; */
-    /* min-height: 50%; */
-    max-width: 1400px;
-    padding: 20px;
-    border: 3px dashed purple;
+    margin-top: 40px;
+    padding-bottom: 20px;
+    
   }
   
-  aside {
-    /* flex: 1; */
-    min-width: 30%;
-    min-height: 200px;
-    border: 3px dotted green;
-    margin: 10px 0px 10px;
+  .aside-header {
+    flex: 0 0 20%;
+    border-right: 5px solid var(--primary);
+    padding-right: 15px ;
   }
   
-  
-  /*! ::::::::::::: IMAGES SECTION ::::::::::::: */
-  .img-border {
-    border: 5px solid var(--secondary);
+  h2 {
+    font-size: 3.5rem;
+    color: var(--primary);
+    border:right;
+    text-align: right;
+  }
+
+  .content {
+    flex: 0 0 77%;
+    flex-wrap: wrap;
   }
   
+  .work {
+    flex: 0 0 77%;
+    flex-wrap: wrap;
+  }
+
   .img-label {
     position: absolute;
     top: 420px;
@@ -171,76 +164,70 @@
   
   .img-1 {
     position: relative;
-    /* min-width: 400px; */
     height: 575px;
-    background-size: 1850px;
     background-image: url("../images/02-portfolio-4.jpg");
     margin-bottom: 20px;
   }
 
+
   .img-2 {
     position: relative;
-    /* min-width: 400px; */
-    height: 575px;
-    width: 50%;
-    background-size: 1850px;
     background-image: url("../images/02-portfolio-1.jpg");
+    height: 575px;
     margin-bottom: 20px;
   }
   
   .img-3 {
     position: relative;
-    /* min-width: 400px; */
-    height: 575px;
-    width: 50%;
-    background-size: 1850px;
     background-image: url("../images/02-portfolio-2.jpg");
+    height: 575px;
     margin-bottom: 20px;
   }
   
   .img-4 {
     position: relative;
-    /* min-width: 400px; */
     height: 575px;
-    width: 50%;
-    background-size: 1850px;
     background-image: url("../images/02-portfolio-3.jpg");
     margin-bottom: 20px;
   }
   
   .img-5 {
     position: relative;
-    /* min-width: 400px; */
     height: 575px;
-    width: 50%;
-    background-size: 1850px;
     background-image: url("../images/02-run-buddy.jpg");
     margin-bottom: 20px;
   }
 
-  /*! ::::::::::::: SECTIONS ::::::::::::: */
-  
-  section {
-    /* flex: 2; */
-    min-width: 68.5%;
-    min-height: 200px;
-    border: 3px dotted green;
-    margin: 10px 0px 10px;
+  .contact {
+    flex: 0 0 77%;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 10px;
+    color: var(--primary);
+    text-align: center;
   }
-
-  .contact-me {
+  a:link {
+    color: var(--primary);
+    border-bottom: 3px solid var(--secondary);
+    text-decoration: none;
+  }
+  a:hover {
+    color: rgb(128, 105, 255);
+  }
+  a:active {
+    color: rgb(255, 105, 138);
+  }
+  .img-border {
+    border: 5px solid var(--secondary);
+  }
+  .contact li {
+    padding: 45px 0px 0px 5px;
+    margin: auto;
     display: flex;
     align-items: center;
-    font-size: 8px;
-    padding: 10% 0;
-  }
-
-  .contact-me li{
-    padding: 10% 0;
-    margin: 10px;
+    font-size: 1.3rem;
     list-style-type: none;
   }
   
-@media screen and (min-width: 993px){
-      
+@media screen and (min-width: 993px){      
 }
