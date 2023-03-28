@@ -141,7 +141,16 @@
   .work {
     flex: 0 0 77%;
     flex-wrap: wrap;
+    display: flex;
+    flex-direction: column
   }
+
+  #r {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  
   .img-label {
     position: absolute;
     top: 420px;
@@ -154,6 +163,7 @@
   .img-1 {
     position: relative;
     height: 575px;
+    width: 100%;
     background-image: url("../images/02-portfolio-4.jpg");
     margin-bottom: 20px;
   }
@@ -161,23 +171,27 @@
     position: relative;
     background-image: url("../images/02-portfolio-1.jpg");
     height: 575px;
+    width: 50%;
     margin-bottom: 20px;
   }
   .img-3 {
     position: relative;
     background-image: url("../images/02-portfolio-2.jpg");
     height: 575px;
+    width: 50%;
     margin-bottom: 20px;
   }
   .img-4 {
     position: relative;
     height: 575px;
+    width: 50%;
     background-image: url("../images/02-portfolio-3.jpg");
     margin-bottom: 20px;
   }
   .img-5 {
     position: relative;
     height: 575px;
+    width: 50%;
     background-image: url("../images/02-run-buddy.jpg");
     margin-bottom: 20px;
   }
